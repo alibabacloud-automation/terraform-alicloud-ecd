@@ -245,28 +245,6 @@ Due to dependencies between resources, they must be created in this order:
 11. Images (depends on Desktops being Stopped)
 ```
 
-## Outputs
-
-This example provides the following outputs:
-
-- `simple_office_site_id` - Office site identifier
-- `policy_group_id` - Policy group identifier
-- `network_package_id` - Network package identifier
-- `bundle_id` - Custom bundle identifier
-- `desktop_ids` - Map of desktop identifiers
-- `user_ids` - Map of user identifiers
-- `custom_property_ids` - Map of custom property identifiers
-- `invocation_ids` - Map of command invocation identifiers
-- `invocation_statuses` - Map of command invocation statuses
-- `image_ids` - Map of image identifiers
-- `snapshot_ids` - Map of snapshot identifiers
-- `nas_file_system_ids` - Map of NAS file system identifiers
-- `ram_directory_id` - RAM directory identifier
-- `ram_directory_status` - RAM directory status
-- `vpc_id` - VPC identifier (for RAM directory)
-- `vswitch_id` - vSwitch identifier (for RAM directory)
-- `current_region_id` - Current region identifier
-
 ## Feature Flags
 
 | Variable | Default | Description |
@@ -320,8 +298,18 @@ To destroy all resources created by this example:
 terraform destroy
 ```
 
+## Cost Estimation
+
+Running this example will incur costs for the following resources:
+- ECD desktops (pay-as-you-go or subscription)
+- Network packages (bandwidth charges)
+- Storage (snapshots and images)
+- Other enabled resources
+
+Please review Alibaba Cloud ECD pricing before deployment.
+
 ## Support
 
 For issues and questions:
-- Module Issues: [GitHub Issues](https://github.com/terraform-alicloud-modules/terraform-alicloud-ecd/issues)
+- Module Issues: [GitHub Issues](https://github.com/alibabacloud-automation/terraform-alicloud-ecd/issues)
 - Alibaba Cloud ECD Documentation: [Official Docs](https://www.alibabacloud.com/help/elastic-desktop-service)
